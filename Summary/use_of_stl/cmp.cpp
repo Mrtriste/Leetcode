@@ -28,6 +28,11 @@ struct cmp2 {
 int main() {
     int a[6] = {6, 4, 1, 7, 2, 9};
 
+    sort(people.begin(), people.end(), [](const vector<int> &a, const vector<int> &b) {
+        if(a[0]==b[0]) return a[1]<b[1];
+        return a[0] > b[0];
+    });
+
     //////////////////////////////////////////////////////// sort
     //括号里是什么顺序返回的就是什么顺序
     // 从小到大：return a.val<b.val; less<int>()
